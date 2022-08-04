@@ -22,6 +22,9 @@
   * In-game, Hit `LeftShift + LeftCtrl + A` to open the Arrow Counter Panel
     * To reset today's usage and add to total, hit `tab` to open the player inventory, then click `Add to Total` button
 
+ ### Notes
+
+  * See source at: [GitHub](https://github.com/BruceOfTheBow/ArrowCounter).
 ## Changelog
 
 ## 1.0.0
