@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="ArrowCounter.cs" />
     <Compile Include="config.cs" />
+    <Compile Include="InfoPanel.cs" />
     <Compile Include="Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

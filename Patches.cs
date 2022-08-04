@@ -12,7 +12,11 @@ namespace ArrowCounter {
 
         [HarmonyPostfix]
         public static void PlayerLoadPostfix(Player __instance) {
-            ArrowCounter.initializeArrowCounts(__instance);
+            if (!string.IsNullOrEmpty(__instance.GetPlayerName())) {
+                ArrowCounter.Initialize(__instance);
+            } else {
+                ArrowCounter.log("No player name found.");
+            }
         }
     }
 
@@ -22,6 +26,9 @@ namespace ArrowCounter {
         [HarmonyPrefix]
         public static bool PlayerDestroyPrefix(Player __instance) {
             ArrowCounter.saveCounts(__instance);
+            if (ArrowCounter.IsInfoPanelActive()) {
+                ArrowCounter.DeactivateInfoPanel();
+            }
             return true;
         }
         
