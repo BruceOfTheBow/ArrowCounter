@@ -28,6 +28,10 @@
 
 ## Changelog
 
+## 1.0.4
+
+  * Refactored logic into InfoPanel class.
+
 ## 1.0.3
 
   * Updated README.md again.

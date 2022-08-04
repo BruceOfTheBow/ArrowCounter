@@ -20,7 +20,7 @@ namespace ArrowCounter
     {
         public const string PluginGuid = "com.bruce.valheim.arrowcounter";
         public const string PluginName = "ArrowCounter";
-        public const string PluginVersion = "1.0.0";
+        public const string PluginVersion = "1.0.4";
 
         private const string countsFileName = "arrowCounts";
         private static ConfigFile configFile = new ConfigFile(Path.Combine(Paths.ConfigPath, "ArrowCounter.cfg"), true);
