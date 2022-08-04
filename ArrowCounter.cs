@@ -32,7 +32,7 @@ namespace ArrowCounter
         private static GameObject infoPanel;
         public static GameObject infoPrefab;
 
-        private static bool _debug = true;
+        private static bool _debug = false;
         public static bool ArrowCounterUIEnabled = true;
         private static bool isInfoPanelActive = false;
 
