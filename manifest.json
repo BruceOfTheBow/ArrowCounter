@@ -3,7 +3,7 @@
   "version_number": "1.0.0",
   "website_url": "https://github.com/BruceOfTheBow/ArrowCounter",
   "author": "BruceOfTheBow",
-  "description": "Set the health of player-placed items in the game to a configurable health value.",
+  "description": "Tracks arrow usage by player.",
   "dependencies": [
     "denikson-BepInExPack_Valheim-5.4.1901",
     "ValheimModding-Jotunn-2.7.2"
