@@ -213,6 +213,20 @@ namespace ArrowCounter
 
                     dataHeight -= 15;
                 }
+                dataHeight -= 30;
+                GameObject buttonObject = GUIManager.Instance.CreateButton(
+                text: "Add to Total",
+                parent: infoPanel.transform,
+                anchorMin: new Vector2(0.5f, 1f),
+                anchorMax: new Vector2(0.5f, 1f),
+                position: new Vector2(0, dataHeight),
+                width: 120f,
+                height: 60f);
+                buttonObject.SetActive(true);
+
+                // Add a listener to the button to close the panel again
+                Button button = buttonObject.GetComponent<Button>();
+                button.onClick.AddListener(addToTotal);
             }
 
             isInfoPanelActive = !isInfoPanelActive;
@@ -220,9 +234,19 @@ namespace ArrowCounter
             infoPanel.SetActive(isInfoPanelActive);
         }
 
+        public static void addToTotal() {
+            log("Adding session counts to total and resetting session counts.");
+            foreach (string arrowName in arrowNames) {
+                totalArrowCounts[arrowName] += sessionArrowCounts[arrowName];
+                sessionArrowCounts[arrowName] = 0;
+            }
+            updateInfoPanel();
+        }
+
         public static void updateInfoPanel() {
             foreach(string arrowName in arrowNames) {
                 arrowCountSessionTexts[arrowName].GetComponent<Text>().text = sessionArrowCounts[arrowName].ToString();
+                arrowCountTotalTexts[arrowName].GetComponent<Text>().text = totalArrowCounts[arrowName].ToString();
             }
         }
 
