@@ -31,7 +31,8 @@ namespace ArrowCounter {
                     "$item_arrow_obsidian",
                     "$item_arrow_poison",
                     "$item_arrow_frost",
-                    "$item_arrow_needle"
+                    "$item_arrow_needle",
+                    "$item_arrow_carapace"
                 };
 
         public InfoPanel() {
@@ -102,7 +103,7 @@ namespace ArrowCounter {
             anchorMax: new Vector2(0.96f, 0.5f),
             position: new Vector2(0, 0),
             width: 150,
-            height: 500,
+            height: 525,
             draggable: false);
 
         float dataHeight = -35f - 45f;

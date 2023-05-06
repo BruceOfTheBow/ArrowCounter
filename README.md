@@ -28,6 +28,10 @@
 
 ## Changelog
 
+## 1.1.0
+
+  * Added support for carapace arrows.
+
 ## 1.0.4
 
   * Refactored logic into InfoPanel class.
